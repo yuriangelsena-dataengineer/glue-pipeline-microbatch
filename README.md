@@ -35,13 +35,12 @@ Este repositorio contiene una solución completa para:
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/tu-usuario/pragma-data-pipeline.git
+git clone https://github.com/yuriangelsena-dataengineer
+glue-pipeline-microbatch
 
 # 2. Configurar entorno AWS
 aws configure --profile glue-pipeline
 
-# 3. Desplegar infraestructura
-./deploy.sh --env dev
 
 ## Arquitectura de la Solución
 ```mermaid
@@ -96,7 +95,7 @@ Políticas requeridas:
         }
     ]
 }
-Crear Rol (CLI): aws iam create-role --role-name GlueRDS-S3-Access --assume-role-policy-document '{
+Crear Rol (CLI): aws iam create-role --role-name glue-s3-RDS-Role --assume-role-policy-document '{
   "Version": "2012-10-17",
   "Statement": [{
     "Effect": "Allow",
